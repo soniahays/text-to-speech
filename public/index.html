@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css"/>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css"/>
+    <link href="css/m-styles.min.css" rel="stylesheet">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular-route.js"></script>
+    <script src="components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+</br>
+</br>
+
+<div class="container">
+    <h1 style="color:#2b3a44">Text to Speech</h1>
+    <div style="max-width: 500px;">
+        <textarea id="message" class="form-control" rows="15" style="max-width: 500px;margin:30px 0;"></textarea>
+        <button id="send-thoughts" class="m-btn purple-stripe col-md-12" style="color:purple;">CONVERT YOUR TEXT TO SPEECH <span class="glyphicon glyphicon-bullhorn"></span></button>
+    </div>
+
+
+    <audio  id="player" autoplay>
+        Your browser does not support the audio tag.
+    </audio>
+
+</div>
+
+<script>
+    var thought = " ";
+    $("button#send-thoughts").click(function() {
+        var thought = $("textarea#message").val();
+        $( "#player" ).html( "<source src='http://api.voicerss.org/?key=643fda28ed834e64b912b1886db996ab&src="+thought+"&hl=en-us&' type='audio/mpeg'>" );
+        console.log(thought);
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "rss-voice",
+  "version": "0.0.0",
+  "description": "speech to text single app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "speech-to-text",
+    "nodejs",
+    "expressjs",
+    "bootstrap"
+  ],
+  "author": "soniabrami",
+  "license": "MIT",
+  "dependencies": {
+    "express": "~4.1.2"
+  }
+}
